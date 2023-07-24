@@ -16,35 +16,180 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- css -->
     <style>
-        p {
+        p,
+        a,
+        summary,
+        button, .poppins {
             font-family: 'Poppins', sans-serif;
+            color: #707070;
         }
+
         .font-eb {
             font-family: 'EB Garamond', serif;
 
         }
+
+        section {
+            margin-bottom: 120px;
+        }
+        @media (max-width: 600px) {
+            html {
+                font-size: 60%;
+            }
+        }
+            
+        
     </style>
 
     <!-- tailwind customs -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                'primary-color': '#707070',
-                'accent-color': '#B68C5A',
-                'primary-dark': '#414040 ',
-                'bg-color': '##F3F3F3',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#707070',
+                        'accent-color': '#B68C5A',
+                        'primary-dark': '#414040 ',
+                        'bg-color': '##F3F3F3',
+                        'gray-color': '##E7E7E7',
+
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 
 </head>
 
 <body class="font-eb">
+    <!-- header -->
+    <header class="max-w-screen-xl mx-auto px-[10px] md:px-[15px] ">
+        <!-- navbar container -->
+        <nav>
+            <div class="navbar py-12">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li>
+                                <a>Services</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>Cases</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>Blog</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>Contact Us</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                       <div>
+                         <img src="./images/Group 2.png" alt="">
+                       </div>
+
+
+                </div>
+                <!-- mobile  -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li tabindex="0">
+                            <details>
+                                <summary>Services</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li tabindex="0">
+                            <details>
+                                <summary>Cases</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li tabindex="0">
+                            <details>
+                                <summary>Blog</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li tabindex="0">
+                            <details>
+                                <summary>Contact Us</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a
+                        class="btn normal-case bg-accent-color text-white font-medium px-7 hover:bg-opacity-60 hover:bg-accent-color">Free
+                        Consultation</a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <section>
+            <div class="hero bg-[url('./images/banner.png')]  rounded-lg">
+               
+                <div class=" text-center py-24 px-6 md:px-3 ">
+                    <div class="max-w-[679px] ">
+                        <h1 class="mb-5 text-7xl font-bold text-white pb-6">We Provide Effective Legal Solutions</h1>
+                        <p class="mb-5 text-[#E7E7E7] focus\:ring-offset-base-100 ">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        <div class="flex justify-between gap-6">
+                            <input type="text" placeholder="Search Your Services " class="w-full rounded-lg poppins bg-white p-5">
+                            <button class=" normal-case bg-accent-color text-white font-medium  hover:bg-opacity-60 hover:bg-accent-color border-0 text-[1.25rem] poppins py-4 px-10 rounded-lg">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="max-w-screen-xl mx-auto px-[10px] md:px-[15px] ">
+        
+
+    </main>
+    <footer>
+
+    </footer>
 
 </body>
 
